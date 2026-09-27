@@ -66,7 +66,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     Text(text = "Head")
                 }
 
-                Row {
+                Row(modifier = Modifier.fillMaxWidth().weight(1f)) {
                     Column(modifier = Modifier.weight(1f)) {
                         Row(
                             modifier = Modifier.padding(1.dp).background(Color.Red).fillMaxWidth()
@@ -208,17 +208,24 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 //            Text(text = "DRUHY", modifier = Modifier.align(Alignment.BottomEnd))
                 //        }
 
+                //Row(
+                //    modifier = Modifier.padding(1.dp).background(Color.LightGray).fillMaxWidth()
+                //        .weight(1f).height(40.dp),
+                //    horizontalArrangement = Arrangement.Center,
+                //    verticalAlignment = Alignment.Top
+                //) {
                 Row(
                     modifier = Modifier.padding(1.dp).background(Color.LightGray).fillMaxWidth()
-                        .weight(1f),//.height(40.dp),
+                        .height(40.dp),
                     horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.Top
+                    verticalAlignment = Alignment.Bottom
                 ) {
                     //Text(text = "Tail")
                     Box(
                         modifier = Modifier
                             .weight(1f)
                             .height(20.dp)
+                            .background(Color.Green)
                     ) {
                         Text(
                             text = "LEVÝ BOX",
@@ -235,6 +242,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                         modifier = Modifier
                             .weight(1f)
                             .height(20.dp)
+                            .background(Color.Yellow)
                     ) {
                         Text(
                             text = "PRAVÝ BOX",
